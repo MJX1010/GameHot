@@ -1238,6 +1238,223 @@
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-steam-newreleases",
+      "name": "Steam New Releases",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://store.steampowered.com/feeds/newreleases.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": true,
+      "owner_entity_id": "valve",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "PC",
+        "发行",
+        "营销"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-steam-featured",
+      "name": "Steam Featured",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://store.steampowered.com/feeds/featured.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": true,
+      "owner_entity_id": "valve",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "PC",
+        "营销"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-epic-store-blog",
+      "name": "Epic Games Store Blog",
+      "kind": "json_list",
+      "config": {
+        "url": "https://store-content-ipv4.ak.epicgames.com/api/en-US/content/blog-posts?count=20&start=0",
+        "itemsPath": "elements",
+        "titlePaths": [
+          "title"
+        ],
+        "urlTemplate": "https://store.epicgames.com/en-US{raw:url}",
+        "publishedAtPath": "date",
+        "summaryPaths": [
+          "short",
+          "title"
+        ],
+        "externalIdPath": "_id",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": true,
+      "owner_entity_id": "epic",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "PC",
+        "发行"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-epic-store-blog-zh",
+      "name": "Epic Games Store Blog · 中文",
+      "kind": "json_list",
+      "config": {
+        "url": "https://store-content-ipv4.ak.epicgames.com/api/zh-CN/content/blog-posts?count=20&start=0",
+        "itemsPath": "elements",
+        "titlePaths": [
+          "title"
+        ],
+        "urlTemplate": "https://store.epicgames.com{raw:url}",
+        "publishedAtPath": "date",
+        "summaryPaths": [
+          "short",
+          "title"
+        ],
+        "externalIdPath": "_id",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": true,
+      "owner_entity_id": "epic",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "PC",
+        "发行",
+        "中文"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-epic-free-games",
+      "name": "Epic Free Games",
+      "kind": "json_list",
+      "config": {
+        "url": "https://store-site-backend-static-ipv4.ak.epicgames.com/freeGamesPromotions?locale=en-US&country=US&allowCountries=US",
+        "itemsPath": "data.Catalog.searchStore.elements",
+        "titlePaths": [
+          "title"
+        ],
+        "urlTemplate": "https://store.epicgames.com/en-US/p/{urlSlug}",
+        "summaryPaths": [
+          "description"
+        ],
+        "externalIdPath": "id",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": true,
+      "owner_entity_id": "epic",
+      "participation_mode": "hot_signal",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "PC",
+        "营销",
+        "免费"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-taptap-hot",
+      "name": "TapTap 热门榜",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.taptap.cn/webapiv2/app-top/v2/hits?platform=android&type_name=hot&X-UA=V%3D1%26PN%3DWebApp%26VN%3D0.1.0%26LANG%3Dzh_CN%26PLT%3DPC",
+        "itemsPath": "data.list",
+        "titlePaths": [
+          "app.title"
+        ],
+        "urlTemplate": "https://www.taptap.cn/app/{app.id}",
+        "summaryPaths": [
+          "app.description",
+          "app.rec_text"
+        ],
+        "externalIdPath": "app.id",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "hot_signal",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "移动",
+        "中文",
+        "热度"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "json-taptap-new",
+      "name": "TapTap 新品榜",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.taptap.cn/webapiv2/app-top/v2/hits?platform=android&type_name=new&X-UA=V%3D1%26PN%3DWebApp%26VN%3D0.1.0%26LANG%3Dzh_CN%26PLT%3DPC",
+        "itemsPath": "data.list",
+        "titlePaths": [
+          "app.title"
+        ],
+        "urlTemplate": "https://www.taptap.cn/app/{app.id}",
+        "summaryPaths": [
+          "app.description",
+          "app.rec_text"
+        ],
+        "externalIdPath": "app.id",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "hot_signal",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "移动",
+        "中文",
+        "发行"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
     }
   ]
 }
