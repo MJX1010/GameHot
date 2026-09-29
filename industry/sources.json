@@ -14,7 +14,7 @@
       "owner_entity_id": "sony",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["官方", "主机"],
+      "tags": [ "官方", "主机" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -31,7 +31,7 @@
       "owner_entity_id": "microsoft",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["官方", "主机"],
+      "tags": [ "官方", "主机" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -48,7 +48,7 @@
       "owner_entity_id": "valve",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["官方", "PC"],
+      "tags": [ "官方", "PC" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -65,7 +65,7 @@
       "owner_entity_id": "unity",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["官方", "引擎"],
+      "tags": [ "官方", "引擎" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -82,7 +82,7 @@
       "owner_entity_id": "epic",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["官方", "引擎"],
+      "tags": [ "官方", "引擎" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -99,7 +99,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["官方", "独立游戏"],
+      "tags": [ "官方", "独立游戏" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -116,7 +116,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体", "开发"],
+      "tags": [ "媒体", "开发" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -133,7 +133,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体", "商务"],
+      "tags": [ "媒体", "商务" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -150,7 +150,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 360,
-      "tags": ["会议", "开发"],
+      "tags": [ "会议", "开发" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -167,7 +167,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体"],
+      "tags": [ "媒体" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -184,7 +184,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体"],
+      "tags": [ "媒体" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -201,7 +201,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体", "PC"],
+      "tags": [ "媒体", "PC" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -218,7 +218,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体"],
+      "tags": [ "媒体" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -235,7 +235,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体", "PC"],
+      "tags": [ "媒体", "PC" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -252,7 +252,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体"],
+      "tags": [ "媒体" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -269,7 +269,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体"],
+      "tags": [ "媒体" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -286,7 +286,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体", "日系"],
+      "tags": [ "媒体", "日系" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -303,7 +303,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体"],
+      "tags": [ "媒体" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -320,7 +320,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["媒体", "商务"],
+      "tags": [ "媒体", "商务" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -337,7 +337,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体", "中文"],
+      "tags": [ "媒体", "中文" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -354,7 +354,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["媒体", "中文", "行业"],
+      "tags": [ "媒体", "中文", "行业" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -371,7 +371,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 90,
-      "tags": ["媒体"],
+      "tags": [ "媒体" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -388,7 +388,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["媒体", "独立游戏"],
+      "tags": [ "媒体", "独立游戏" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -405,7 +405,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["媒体", "中文"],
+      "tags": [ "媒体", "中文" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -422,7 +422,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 90,
-      "tags": ["媒体", "中文", "商务"],
+      "tags": [ "媒体", "中文", "商务" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -439,7 +439,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 90,
-      "tags": ["媒体", "中文", "开发"],
+      "tags": [ "媒体", "中文", "开发" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -456,7 +456,7 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["官方", "中文", "开发"],
+      "tags": [ "官方", "中文", "开发" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -473,7 +473,109 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["媒体", "中文", "独立游戏"],
+      "tags": [ "媒体", "中文", "独立游戏" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-appinn-games",
+      "name": "小众软件 · 游戏",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.appinn.com/category/games/feed/",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [ "媒体", "中文", "独立游戏" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-cocos-forum",
+      "name": "Cocos 中文社区",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://forum.cocos.org/latest.rss",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [ "社区", "中文", "开发", "引擎" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-codingnow",
+      "name": "云风的 BLOG",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blog.codingnow.com/atom.xml",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [ "开发", "中文" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-skywind",
+      "name": "Skywind Inside",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.skywind.me/blog/feed",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [ "开发", "中文" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-netease-fuxi",
+      "name": "网易伏羲",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.cnblogs.com/wyfx/rss",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [ "官方", "中文", "开发" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-latias94",
+      "name": "萤火之森",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://latias94.github.io/atom.xml",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [ "开发", "中文", "独立游戏" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     }
