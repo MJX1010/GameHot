@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="116" fill="#13191c"/><path d="M256 92C271 199 313 241 420 256C313 271 271 313 256 420C241 313 199 271 92 256C199 241 241 199 256 92Z" fill="#2ce2e8"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="GameHot">
+  <defs>
+    <linearGradient id="heat" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2d95"/>
+      <stop offset="55%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="#0b062e"/>
+  <!-- soft glow -->
+  <circle cx="256" cy="250" r="150" fill="url(#heat)" opacity="0.18"/>
+  <!-- gamepad body -->
+  <rect x="118" y="200" width="276" height="148" rx="74" fill="url(#heat)"/>
+  <rect x="118" y="200" width="276" height="148" rx="74" fill="#12083f" opacity="0.35"/>
+  <!-- D-pad -->
+  <rect x="168" y="248" width="44" height="14" rx="3" fill="#0b062e"/>
+  <rect x="183" y="233" width="14" height="44" rx="3" fill="#0b062e"/>
+  <!-- action buttons -->
+  <circle cx="320" cy="242" r="12" fill="#22d3ee"/>
+  <circle cx="348" cy="268" r="12" fill="#ff2d95"/>
+  <circle cx="292" cy="268" r="12" fill="#a78bfa"/>
+  <circle cx="320" cy="294" r="12" fill="#fbbf24"/>
+  <!-- heat flame accent above pad -->
+  <path d="M256 120c18 28 28 48 28 72 0 28-18 48-28 48s-28-20-28-48c0-24 10-44 28-72z" fill="#ff2d95" opacity="0.95"/>
+  <path d="M256 152c10 16 16 28 16 42 0 16-10 28-16 28s-16-12-16-28c0-14 6-26 16-42z" fill="#22d3ee" opacity="0.85"/>
+</svg>

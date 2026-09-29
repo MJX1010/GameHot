@@ -1,11 +1,12 @@
-// The site's wordmark (its name from industry/site.ts, set in type) and a small ring mark used as the
-// loader. A site with its own logo can replace Wordmark here.
+// The site's wordmark (its name from industry/site.ts) with the industry brand icon.
+// Icons are served from industry/brand/ via the API static routes (/icon.png).
 import { SITE } from "@aihot/industry/site";
 
 export function Wordmark({ size = 22, className = "" }: { size?: number; className?: string }) {
+  const icon = Math.round(size * 1.05);
   return (
     <span className={`inline-flex items-center font-black leading-none tracking-[-0.03em] ${className}`} style={{ fontSize: size }} aria-label={SITE.name} role="img">
-      <span aria-hidden="true" className="mr-[0.3em] inline-block size-[0.42em] rounded-full bg-accent" />
+      <img src="/icon.png" alt="" width={icon} height={icon} className="mr-[0.35em] inline-block rounded-[22%] object-contain" aria-hidden="true" />
       <span aria-hidden="true">{SITE.name}</span>
     </span>
   );

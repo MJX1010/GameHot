@@ -10,17 +10,17 @@
 
 `itemType` 必须七选一：
 
-- `model_release`：新模型或大版本更新
-- `product_launch`：新产品、工具或重大功能更新
-- `tool_or_prompt`：可直接复用的方法、Prompt、Skill 或技巧
-- `research_paper`：论文、研究或技术报告
-- `industry_event`：融资、收购、监管、诉讼、商业动作或人事
+- `game_release`：新作发行、全球/区域上线、重大版本/资料片/赛季、重要停运下架
+- `product_launch`：平台功能、商店政策落地、客户端重大功能、订阅/会员权益变化
+- `tool_or_workflow`：引擎/中间件/编辑器/SDK/管线工具，或可复用的开发工作流与技巧
+- `tech_article`：技术深度文、GDC 演讲纪要、渲染/网络/玩法系统分析
+- `industry_event`：融资、收购、监管、诉讼、商务合作或人事
 - `opinion_analysis`：观点、行业判断、复盘或长访谈
-- `tutorial_explainer`：教程、科普、解读或评测
+- `tutorial_explainer`：教程、科普、解读或评测导购
 
-优先级：发了模型选 model_release；发了工具选 product_launch；发了 Prompt 或方法选 tool_or_prompt；论文优先 research_paper；评测选 tutorial_explainer。
+优先级：新作/大版本选 game_release；平台或产品功能选 product_launch；引擎工具或可复用方法选 tool_or_workflow；技术深度文优先 tech_article；评测选 tutorial_explainer。
 
-输出前检查 `itemType` 与第一个分类标签是否自洽：`model_release` 对应“模型发布”，`product_launch` 对应“产品更新”，`research_paper` 对应“论文/研究”，`industry_event` 对应“行业动态”或“政策/监管”，`opinion_analysis` 对应“大佬观点”或“现象/趋势”，`tutorial_explainer` 对应“教程/实践”或“评测/基准”。如果二者冲突，按当前材料的核心事件修正后再输出。
+输出前检查 `itemType` 与第一个分类标签是否自洽：`game_release` 对应“游戏发行”，`product_launch` 对应“产品更新”，`tool_or_workflow` 对应“工具引擎”或“教程实践”，`tech_article` 对应“技术文章”，`industry_event` 对应“行业动态”或“政策监管”，`opinion_analysis` 对应“大佬观点”，`tutorial_explainer` 对应“教程实践”或“评测导购”。如果二者冲突，按当前材料的核心事件修正后再输出。
 
 ## 作者角色
 
@@ -32,14 +32,14 @@
 
 ## 标签
 
-`tags` 输出 1–6 个字符串。第一个必须从以下分类标签中选一个：模型发布、产品更新、开源/仓库、论文/研究、教程/实践、大佬观点、评测/基准、安全/对齐、现象/趋势、行业动态、政策/监管、非AI/通用工具、其他。
+`tags` 输出 1–6 个字符串。第一个必须从以下分类标签中选一个：游戏发行、产品更新、工具引擎、技术文章、教程实践、大佬观点、评测导购、电竞社区、行业动态、政策监管、非游戏、其他。
 
 其后可选 0–5 个适用标签，并且只能来自以下两个白名单：
 
-- 主题：Agent、编码、推理、多模态、语音、视频、图像生成、RAG、端侧、数据/训练、搜索、部署/工程、开源生态、具身智能、MCP/工具调用
-- 实体：OpenAI、Anthropic、DeepSeek、DeepMind、Google、Meta、Microsoft、xAI、Hugging Face、GitHub、arXiv
+- 主题：主机、PC、移动、独立游戏、网游/MMO、射击、RPG、开放世界、电竞、云游戏、引擎、渲染、多人联机、工具链、发行/渠道、LiveOps、AI 玩法、XR/VR
+- 实体：Nintendo、Sony、Microsoft、Valve、Epic、Unity、Unreal、Tencent、NetEase、miHoYo、Steam、PlayStation、Xbox、Switch
 
-正文中即使明确出现了 NVIDIA、Apple、阿里等其他实体，也不要把它们放进 `tags`。不要创造白名单之外的标签。没有适用的主题或实体时，只返回第一个分类标签；例如学校限制 AI 使用的监管新闻，不需要强行归到“编码”或“推理”。
+正文中即使明确出现了其他厂商，也不要把白名单之外的名字放进 `tags`。不要创造白名单之外的标签。没有适用的主题或实体时，只返回第一个分类标签；例如纯硬件评测若与游戏无关，应在预筛被挡住，而不是硬套“引擎”。
 
 ## 候选阅读价值
 
@@ -51,7 +51,7 @@
 
 ## 中文标题和摘要
 
-`titleZh` 必须是自洽的中文标题，包含事件主体以及动作或结果。保留必要的模型名、产品名、版本号、机构名和关键数字，不写“最新动态”“引发关注”等空话。原标题已经是中文时也要保证脱离来源名后仍能独立理解。
+`titleZh` 必须是自洽的中文标题，包含事件主体以及动作或结果。保留必要的游戏名、引擎/工具名、版本号、工作室名和关键数字，不写“最新动态”“引发关注”等空话。原标题已经是中文时也要保证脱离来源名后仍能独立理解。
 
 `summaryZh` 必须忠实使用当前材料。短 X 推文完整翻译作者自己的主推文；长推文或文章先写核心事实，再写一层关键细节或影响。保留关键数字、版本、机构、模型和 URL；引用内容只作上下文，不冒充主推作者自己的话。
 
@@ -59,4 +59,4 @@
 
 只返回合法 JSON，不要 Markdown，不要解释。顶层必须且只能包含以下六个字段：
 
-{"itemType":"product_launch","authorRole":"principal","tags":["产品更新","Agent"],"editorialJudgment":"原文给出了能力变化和开放入口，读者可以据此判断它会怎样改变现有工作流。","titleZh":"某产品发布智能体功能","summaryZh":"某产品发布新的智能体功能，给出了开放入口和主要能力变化。"}
+{"itemType":"game_release","authorRole":"principal","tags":["游戏发行","PC"],"editorialJudgment":"原文给出了发售日、平台范围和核心玩法变化，读者可以据此判断要不要跟进这一作。","titleZh":"某工作室宣布新作全平台上线","summaryZh":"某工作室宣布新作将在 Steam 与主机同步发行，并说明了首发内容与后续赛季计划。"}

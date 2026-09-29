@@ -8,132 +8,144 @@
  * 没归上类的资料在日报里放进第一个 key 为 industry 的类别所在的节（没有就放最后一节）。
  */
 export const CATEGORIES = [
-  { key: "ai-models", label: "模型", section: "模型发布/更新", guide: "新模型、模型版本、权重开放、模型能力与价格变化的发布与评测结果" },
-  { key: "ai-products", label: "产品", section: "产品发布/更新", guide: "AI 产品、功能、应用、工具、API 与平台的发布和更新" },
-  { key: "industry", label: "行业", section: "行业动态", guide: "公司经营、融资并购、人事、合作、诉讼、监管与政策、市场与基础设施" },
-  { key: "paper", label: "论文", section: "论文研究", guide: "研究论文、技术报告、基准与数据集" },
-  { key: "tip", label: "教程", section: "技巧与观点", guide: "教程、实践经验、使用技巧、提示词与工具用法、深度技术讲解" },
-  { key: "opinion", label: "观点", section: "技巧与观点", guide: "人物观点、评论、分析、访谈、现象与趋势讨论" },
+  { key: "releases", label: "发行", section: "发行与更新", guide: "新作发行、全球/区域上线、重大更新、赛季/资料片、重要补丁与平衡性调整、停运与下架" },
+  { key: "industry", label: "行业", section: "行业动态", guide: "平台政策、排行榜与市场数据、监管与评级、诉讼、硬件主机策略、渠道与发行政策" },
+  { key: "esports", label: "电竞", section: "电竞与社区", guide: "电竞赛事、战队与选手转会、社区现象、模组/同人文化、直播与创作者生态" },
+  { key: "tools-engines", label: "工具引擎", section: "引擎与工具", guide: "游戏引擎、中间件、编辑器、SDK、构建与管线工具、平台开发者文档与版本发布" },
+  { key: "studios", label: "工作室", section: "工作室与商务", guide: "工作室成立/关闭、融资并购、人事任命、发行协议、财报与商务合作" },
+  { key: "tech-art", label: "技术美术", section: "技术与观点", guide: "渲染/玩法/网络技术分享、美术管线、GDC 级演讲、深度评测、观点与复盘、教程实践" },
 ] as const;
 
 /**
  * 内容理解一步给每篇资料判的“内容类型”（写在 prompts/content-understanding.md 里，改了类型要同步改那份提示词）。
  * 评分提示词（prompts/selection-score.md）按类型给五个维度不同的权重。
  */
-export const ITEM_TYPES = ["model_release", "product_launch", "tool_or_prompt", "research_paper", "industry_event", "opinion_analysis", "tutorial_explainer"] as const;
+export const ITEM_TYPES = ["game_release", "product_launch", "tool_or_workflow", "tech_article", "industry_event", "opinion_analysis", "tutorial_explainer"] as const;
 
 // ── 标签词表 ────────────────────────────────────────────────────────────────────────────
 
 /** 每篇资料的第一个标签必须是这些“分类标签”之一。 */
 export const CATEGORY_TAGS = [
-  "产品更新", "模型发布", "论文/研究", "开源/仓库", "教程/实践", "现象/趋势", "大佬观点", "评测/基准", "安全/对齐", "行业动态", "政策/监管",
-  "非AI/通用工具", "其他",
+  "游戏发行", "产品更新", "工具引擎", "技术文章", "教程实践", "大佬观点", "评测导购", "电竞社区", "行业动态", "政策监管",
+  "非游戏", "其他",
 ] as const;
 
 /** 可选的主题标签。 */
 export const TOPIC_TAGS = [
-  "Agent", "编码", "推理", "多模态", "语音", "视频", "图像生成", "RAG", "端侧", "数据/训练", "搜索", "部署/工程", "开源生态", "具身智能", "MCP/工具调用",
+  "主机", "PC", "移动", "独立游戏", "网游/MMO", "射击", "RPG", "开放世界", "电竞", "云游戏",
+  "引擎", "渲染", "多人联机", "工具链", "发行/渠道", "LiveOps", "AI 玩法", "XR/VR",
 ] as const;
 
 /** 可选的实体标签（公司、机构、平台）。 */
-export const ENTITY_TAGS = ["OpenAI", "Anthropic", "DeepSeek", "DeepMind", "Google", "Meta", "Microsoft", "xAI", "Hugging Face", "GitHub", "arXiv"] as const;
+export const ENTITY_TAGS = [
+  "Nintendo", "Sony", "Microsoft", "Valve", "Epic", "Unity", "Unreal", "Tencent", "NetEase", "miHoYo",
+  "Steam", "PlayStation", "Xbox", "Switch",
+] as const;
 
 /** 模型常写的近义词，统一成词表里的写法。 */
 export const TAG_SYNONYMS: Readonly<Record<string, string>> = {
-  "教程/玩法": "教程/实践", "技巧/最佳实践": "教程/实践", "合作/生态": "行业动态", "融资/收购": "行业动态", "公司动态": "行业动态",
-  合作: "行业动态", 生态: "行业动态", 融资: "行业动态", 收购: "行业动态", 投资: "行业动态", 并购: "行业动态",
-  政策: "政策/监管", 监管: "政策/监管", 法规: "政策/监管", 安全: "安全/对齐", 对齐: "安全/对齐",
-  论文: "论文/研究", 研究: "论文/研究", paper: "论文/研究", papers: "论文/研究",
-  "open-source": "开源/仓库", 开源: "开源/仓库", 仓库: "开源/仓库", repo: "开源/仓库",
-  教程: "教程/实践", 玩法: "教程/实践", 指南: "教程/实践", 技巧: "教程/实践", 最佳实践: "教程/实践", 实践: "教程/实践",
-  产品: "产品更新", 更新: "产品更新", 发布: "模型发布", 模型: "模型发布", 趋势: "现象/趋势", 现象: "现象/趋势", 观点: "大佬观点",
-  视频生成: "视频", 非ai: "非AI/通用工具", "non-ai": "非AI/通用工具", 通用工具: "非AI/通用工具", 工程工具: "非AI/通用工具",
-  安全扫描: "非AI/通用工具", devops: "非AI/通用工具", 行业: "行业动态", 动态: "行业动态",
+  发行: "游戏发行", 发售: "游戏发行", 上线: "游戏发行", 上架: "游戏发行", 新作: "游戏发行", 资料片: "游戏发行", 赛季: "游戏发行",
+  更新: "产品更新", 补丁: "产品更新", 版本: "产品更新", hotfix: "产品更新",
+  引擎: "工具引擎", 开源: "工具引擎", 中间件: "工具引擎", 编辑器: "工具引擎", SDK: "工具引擎", 工具: "工具引擎",
+  技术: "技术文章", GDC: "技术文章", 演讲: "技术文章", 论文: "技术文章",
+  教程: "教程实践", 实践: "教程实践", 指南: "教程实践", 管线: "教程实践",
+  评测: "评测导购", 导购: "评测导购", 评分: "评测导购", review: "评测导购",
+  电竞: "电竞社区", 赛事: "电竞社区", 战队: "电竞社区", 社区: "电竞社区", 模组: "电竞社区", mod: "电竞社区",
+  行业: "行业动态", 动态: "行业动态", 融资: "行业动态", 收购: "行业动态", 并购: "行业动态", 人事: "行业动态", 财报: "行业动态",
+  政策: "政策监管", 监管: "政策监管", 评级: "政策监管", ESRB: "政策监管", PEGI: "政策监管", 版号: "政策监管",
+  观点: "大佬观点", 访谈: "大佬观点", 复盘: "大佬观点", 趋势: "大佬观点",
+  非游戏: "非游戏", "non-game": "非游戏",
+  主机游戏: "主机", 单机: "PC", 手游: "移动", indie: "独立游戏", 独立: "独立游戏",
+  MMO: "网游/MMO", FPS: "射击", "开放世界": "开放世界",
+  UE: "引擎", "Unreal Engine": "引擎", Unity引擎: "引擎",
+  联机: "多人联机", 网络同步: "多人联机",
+  Live: "LiveOps", 运营: "LiveOps",
+  VR: "XR/VR", AR: "XR/VR", XR: "XR/VR",
+  任天堂: "Nintendo", 索尼: "Sony", 微软: "Microsoft", 腾讯: "Tencent", 网易: "NetEase", 米哈游: "miHoYo", 崩坏: "miHoYo", 原神: "miHoYo",
+  蒸汽: "Steam", 史低: "Steam", PS5: "PlayStation", PS4: "PlayStation", Series: "Xbox",
 };
 
 /** 模型漏了分类标签时，按内容类型补一个。 */
 export const CATEGORY_BY_ITEM_TYPE: Readonly<Record<string, string>> = {
-  model_release: "模型发布", product_launch: "产品更新", tool_or_prompt: "教程/实践", research_paper: "论文/研究",
-  industry_event: "行业动态", opinion_analysis: "大佬观点", tutorial_explainer: "教程/实践",
+  game_release: "游戏发行",
+  product_launch: "产品更新",
+  tool_or_workflow: "工具引擎",
+  tech_article: "技术文章",
+  industry_event: "行业动态",
+  opinion_analysis: "大佬观点",
+  tutorial_explainer: "教程实践",
 };
 
 // ── 公司与主体 ──────────────────────────────────────────────────────────────────────────
 
 /** 公司主题：id → 显示名、卡片上显示的标签（null 表示只用 entity:<id> 归类）、别名。 */
 export const ENTITIES: Record<string, { name: string; displayTag: string | null; aliases: string[] }> = {
-  openai: { name: "OpenAI", displayTag: "OpenAI", aliases: ["OpenAI", "ChatGPT", "Sora", "Codex", "GPT"] },
-  anthropic: { name: "Anthropic", displayTag: "Anthropic", aliases: ["Anthropic", "Claude"] },
-  google: { name: "Google", displayTag: "Google", aliases: ["Google", "DeepMind", "Gemini", "谷歌"] },
-  deepseek: { name: "DeepSeek", displayTag: "DeepSeek", aliases: ["DeepSeek", "深度求索"] },
-  qwen: { name: "千问 Qwen", displayTag: null, aliases: ["Qwen", "通义", "阿里"] },
-  kimi: { name: "Kimi / 月之暗面", displayTag: null, aliases: ["Kimi", "月之暗面", "Moonshot"] },
-  minimax: { name: "MiniMax", displayTag: null, aliases: ["MiniMax", "海螺"] },
-  zhipu: { name: "智谱 GLM", displayTag: null, aliases: ["智谱", "GLM", "Z.ai"] },
-  xai: { name: "xAI", displayTag: "xAI", aliases: ["xAI", "Grok"] },
-  meta: { name: "Meta", displayTag: "Meta", aliases: ["Meta", "Llama"] },
-  microsoft: { name: "Microsoft", displayTag: "Microsoft", aliases: ["Microsoft", "微软", "Copilot"] },
-  nvidia: { name: "NVIDIA", displayTag: null, aliases: ["NVIDIA", "英伟达"] },
-  "hugging-face": { name: "Hugging Face", displayTag: "Hugging Face", aliases: ["Hugging Face"] },
-  cursor: { name: "Cursor", displayTag: null, aliases: ["Cursor", "Anysphere"] },
-  openrouter: { name: "OpenRouter", displayTag: null, aliases: ["OpenRouter"] },
+  nintendo: { name: "Nintendo", displayTag: "Nintendo", aliases: ["Nintendo", "任天堂", "Switch", "Switch 2"] },
+  sony: { name: "Sony / PlayStation", displayTag: "Sony", aliases: ["Sony", "索尼", "PlayStation", "PS5", "PS4", "SIE"] },
+  microsoft: { name: "Microsoft / Xbox", displayTag: "Microsoft", aliases: ["Microsoft", "微软", "Xbox", "Game Pass", "Activision", "Blizzard", "Bethesda"] },
+  valve: { name: "Valve / Steam", displayTag: "Valve", aliases: ["Valve", "Steam", "Steam Deck", "Source 2"] },
+  epic: { name: "Epic Games", displayTag: "Epic", aliases: ["Epic", "Epic Games", "Fortnite", "Unreal", "UE5", "Epic Games Store"] },
+  unity: { name: "Unity", displayTag: "Unity", aliases: ["Unity", "Unity Technologies"] },
+  tencent: { name: "Tencent", displayTag: "Tencent", aliases: ["Tencent", "腾讯", "光子", "天美", "腾讯游戏"] },
+  netease: { name: "NetEase", displayTag: "NetEase", aliases: ["NetEase", "网易", "网易游戏"] },
+  mihoyo: { name: "miHoYo / HoYoverse", displayTag: "miHoYo", aliases: ["miHoYo", "Hoyoverse", "HoYoverse", "米哈游", "原神", "崩坏", "绝区零"] },
+  take2: { name: "Take-Two / Rockstar", displayTag: null, aliases: ["Take-Two", "Rockstar", "2K", "GTA"] },
+  ea: { name: "Electronic Arts", displayTag: null, aliases: ["EA", "Electronic Arts", "DICE", "Respawn"] },
+  ubisoft: { name: "Ubisoft", displayTag: null, aliases: ["Ubisoft", "育碧"] },
+  squareenix: { name: "Square Enix", displayTag: null, aliases: ["Square Enix", "史克威尔艾尼克斯", "Final Fantasy"] },
+  capcom: { name: "Capcom", displayTag: null, aliases: ["Capcom", "卡普空", "Resident Evil", "Monster Hunter"] },
+  sega: { name: "SEGA", displayTag: null, aliases: ["SEGA", "世嘉", "Sonic"] },
+  bandainamco: { name: "Bandai Namco", displayTag: null, aliases: ["Bandai Namco", "万代南梦宫"] },
+  krafton: { name: "Krafton", displayTag: null, aliases: ["Krafton", "PUBG"] },
+  riot: { name: "Riot Games", displayTag: null, aliases: ["Riot", "Riot Games", "League of Legends", "Valorant", "英雄联盟"] },
+  blizzard: { name: "Blizzard", displayTag: null, aliases: ["Blizzard", "暴雪", "World of Warcraft", "Overwatch", "Diablo"] },
+  roblox: { name: "Roblox", displayTag: null, aliases: ["Roblox"] },
 };
 
 /**
  * 身份词典：摘要和标题里出现的公司，必须在原文里也出现过，否则退回原标题、丢掉摘要（防止模型张冠李戴）。
- * 行业没有这个问题时可以留空数组。
  */
 export const IDENTITY_LEXICON: ReadonlyArray<{ id: string; name: string; patterns: RegExp[] }> = [
-  { id: "openai", name: "OpenAI", patterns: [/openai|chatgpt|\bgpt-?[o\d]|\bsora\b|\bcodex\b/i] },
-  { id: "anthropic", name: "Anthropic", patterns: [/anthropic|\bclaude\b/i, /\b(?:opus|sonnet|haiku)\s*\d+(?:[.\-]\d+)*\b/i, /\bfable\s*\d+(?:[.\-]\d+)*\b|\bmythos\b/i] },
-  { id: "google", name: "Google / Gemini", patterns: [/google|deepmind|\bgemini\b|notebooklm|\bveo\s?\d|\bAlphaFold\b|\bAMIE\b/i] },
-  { id: "deepseek", name: "DeepSeek", patterns: [/deepseek|深度求索/i] },
-  { id: "xai", name: "xAI / Grok", patterns: [/\bxai\b|\bgrok\b/i] },
-  { id: "meta", name: "Meta / Llama", patterns: [/\bMeta\b/, /\bmeta\s?ai\b|\bllama\b/i] },
-  { id: "microsoft", name: "Microsoft / Copilot", patterns: [/microsoft|copilot|微软/i] },
-  { id: "nvidia", name: "NVIDIA", patterns: [/nvidia|英伟达|\bnemotron\b|\bnemo\b|\bblackwell\b|\brubin(?:\s+ultra)?\b|\bcuda\b/i] },
-  { id: "qwen", name: "千问 Qwen", patterns: [/\bqwen|通义|千问/i] },
-  { id: "hugging-face", name: "Hugging Face", patterns: [/hugging\s?face/i] },
-  { id: "cursor", name: "Cursor", patterns: [/\bCursor\b/] },
-  { id: "kimi", name: "Kimi / 月之暗面", patterns: [/\bkimi\b|月之暗面|\bmoonshot\s?ai\b/i] },
-  { id: "openrouter", name: "OpenRouter", patterns: [/openrouter/i] },
-  { id: "minimax", name: "MiniMax", patterns: [/minimax/i] },
-  { id: "zhipu", name: "智谱 GLM", patterns: [/智谱|\bglm-?[4-9]/i] },
-  { id: "hunyuan", name: "腾讯混元", patterns: [/混元|hunyuan/i] },
-  { id: "doubao", name: "字节豆包", patterns: [/豆包|doubao|字节跳动|bytedance/i] },
-  { id: "mistral", name: "Mistral", patterns: [/mistral/i] },
-  { id: "perplexity", name: "Perplexity", patterns: [/\bPerplexity\b/] },
-  { id: "runway", name: "Runway", patterns: [/\brunway\b/i] },
-  { id: "suno", name: "Suno", patterns: [/\bsuno\b/i] },
-  { id: "midjourney", name: "Midjourney", patterns: [/midjourney/i] },
-  { id: "stability-ai", name: "Stability AI", patterns: [/stability\s?ai/i] },
-  { id: "elevenlabs", name: "ElevenLabs", patterns: [/eleven\s?labs/i] },
-  { id: "vllm", name: "vLLM", patterns: [/\bvllm\b/i] },
-  { id: "ollama", name: "Ollama", patterns: [/\bollama\b/i] },
-  { id: "windsurf", name: "Windsurf", patterns: [/windsurf/i] },
-  { id: "devin", name: "Devin", patterns: [/\bdevin\b/i] },
-  { id: "manus", name: "Manus", patterns: [/\bmanus\b/i] },
-  { id: "apple", name: "Apple AI", patterns: [/\bapple\s?(intelligence|silicon|ai)\b|苹果(智能|\s?AI)/i] },
-  { id: "amazon", name: "Amazon / AWS", patterns: [/amazon|\baws\b|亚马逊/i] },
-  { id: "baidu", name: "百度文心", patterns: [/百度|baidu|文心|\bernie\s?bot\b/i] },
+  { id: "nintendo", name: "Nintendo", patterns: [/nintendo|任天堂|\bswitch\s?2?\b/i] },
+  { id: "sony", name: "Sony / PlayStation", patterns: [/\bsony\b|索尼|playstation|\bps[45]\b|\bSIE\b/i] },
+  { id: "microsoft", name: "Microsoft / Xbox", patterns: [/microsoft|微软|\bxbox\b|game\s?pass|activision|bethesda/i] },
+  { id: "valve", name: "Valve / Steam", patterns: [/\bvalve\b|\bsteam\b|steam\s?deck|source\s?2/i] },
+  { id: "epic", name: "Epic Games", patterns: [/\bepic\b|fortnite|unreal\s?engine|\bue[45]\b/i] },
+  { id: "unity", name: "Unity", patterns: [/\bunity\b/i] },
+  { id: "tencent", name: "Tencent", patterns: [/tencent|腾讯/i] },
+  { id: "netease", name: "NetEase", patterns: [/netease|网易/i] },
+  { id: "mihoyo", name: "miHoYo / HoYoverse", patterns: [/mihoyo|hoyoverse|米哈游|原神|崩坏|绝区零|\bgenshin\b/i] },
+  { id: "take2", name: "Take-Two / Rockstar", patterns: [/take-?two|rockstar|\bgta\b|\b2k\b/i] },
+  { id: "ea", name: "Electronic Arts", patterns: [/\bea\b|electronic\sarts|respawn|\bdice\b/i] },
+  { id: "ubisoft", name: "Ubisoft", patterns: [/ubisoft|育碧/i] },
+  { id: "squareenix", name: "Square Enix", patterns: [/square\s?enix|史克威尔|final\sfantasy/i] },
+  { id: "capcom", name: "Capcom", patterns: [/capcom|卡普空|resident\sevil|monster\shunter/i] },
+  { id: "riot", name: "Riot Games", patterns: [/\briot\b|league\sof\slegends|\bvalorant\b|英雄联盟/i] },
+  { id: "blizzard", name: "Blizzard", patterns: [/blizzard|暴雪|world\sof\swarcraft|\boverwatch\b|\bdiablo\b/i] },
+  { id: "roblox", name: "Roblox", patterns: [/\broblox\b/i] },
 ];
 
-/** 这些域名上的文章，发布方就是对应的公司（托管平台如 GitHub、arXiv 不算）。 */
+/** 这些域名上的文章，发布方就是对应的公司（托管平台如 GitHub、Medium 不算）。 */
 export const PUBLISHER_DOMAINS: ReadonlyArray<{ entityId: string; domains: readonly string[] }> = [
-  { entityId: "openai", domains: ["openai.com"] },
-  { entityId: "anthropic", domains: ["anthropic.com", "claude.com"] },
-  { entityId: "google", domains: ["deepmind.google", "ai.google", "blog.google"] },
-  { entityId: "deepseek", domains: ["deepseek.com"] },
-  { entityId: "xai", domains: ["x.ai"] },
-  { entityId: "meta", domains: ["ai.meta.com"] },
-  { entityId: "microsoft", domains: ["microsoft.com"] },
-  { entityId: "nvidia", domains: ["nvidia.com"] },
-  { entityId: "qwen", domains: ["qwen.ai"] },
-  { entityId: "cursor", domains: ["cursor.com"] },
-  { entityId: "openrouter", domains: ["openrouter.ai"] },
+  { entityId: "nintendo", domains: ["nintendo.com", "nintendo.co.jp"] },
+  { entityId: "sony", domains: ["playstation.com", "blog.playstation.com"] },
+  { entityId: "microsoft", domains: ["xbox.com", "news.xbox.com", "microsoft.com"] },
+  { entityId: "valve", domains: ["steampowered.com", "store.steampowered.com", "valvesoftware.com"] },
+  { entityId: "epic", domains: ["epicgames.com", "unrealengine.com", "fortnite.com"] },
+  { entityId: "unity", domains: ["unity.com", "blog.unity.com", "blogs.unity3d.com"] },
+  { entityId: "tencent", domains: ["tencent.com", "tencentgames.com"] },
+  { entityId: "netease", domains: ["netease.com", "163.com"] },
+  { entityId: "mihoyo", domains: ["mihoyo.com", "hoyoverse.com", "genshin.hoyoverse.com"] },
+  { entityId: "riot", domains: ["riotgames.com"] },
+  { entityId: "blizzard", domains: ["blizzard.com", "worldofwarcraft.com"] },
+  { entityId: "roblox", domains: ["roblox.com"] },
 ];
 
 /** 原文里的这些写法也算提到了对应公司。 */
 export const IDENTITY_CONTEXT_ALIASES: ReadonlyArray<{ entityId: string; pattern: RegExp }> = [
-  { entityId: "meta", pattern: /@AIatMeta\b/i },
-  { entityId: "zhipu", pattern: /\bZhipu(?:\s+AI\b|['’]s\b)/i },
+  { entityId: "microsoft", pattern: /@Xbox\b|@Microsoft\b/i },
+  { entityId: "sony", pattern: /@PlayStation\b/i },
+  { entityId: "nintendo", pattern: /@NintendoAmerica\b|@Nintendo\b/i },
+  { entityId: "epic", pattern: /@UnrealEngine\b|@EpicGames\b/i },
+  { entityId: "unity", pattern: /@Unity\b/i },
 ];

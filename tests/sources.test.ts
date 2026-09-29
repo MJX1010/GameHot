@@ -60,7 +60,7 @@ const pages: Record<string, (cdn: string) => string> = {
     '(0,n.jsx)(r.K,{sectionId:"paper",sectionTitle:"Paper",blogs:l.G.slice().reverse().map(e=>({title:e.title,link:`/paper/${e.slug}`,desc:(0,l.V)(e.date,!1)}))}),' +
     '(0,n.jsx)(r.K,{sectionTitle:"Blog",initialVisibleCount:8,blogs:[' +
     '{title:"Diagnosing and Mitigating Tool-Call Repetition in MiMo-V2.6",link:"/blog/mimo-v2-6-tool-call-repetition",desc:"A lesson from scaling RL: the reward blind spot in optimizing for correctness."},' +
-    '{title:"Introducing MiMo-V2.6 series",link:"/mimo-v2-6",desc:"Frontier intelligence, all the modalities, built in public."},' +
+    '{title:"Announcing MiMo-V2.6 series",link:"/mimo-v2-6",desc:"Frontier intelligence, all the modalities, built in public."},' +
     '{title:"How Xiaomi MiMo-V2.6-Pro Boosts Productivity in New Materials R\\u0026D",link:"/blog/mimo-v2-6-material-research",desc:"From literature review to \\"dry-lab\\" experiments."},' +
     '{title:"Xiaomi MiMo-V2.5-Pro",link:"/mimo-v2-5-pro/index.html",desc:"A leap in agentic and long horizon coherence."},' +
     '{title:"MiMo Humanities and Social Sciences Capability Assessment",link:"/blog/mimo-v2-flash-hss",desc:"MiMo Humanities and Social Sciences Capability Assessment"}]}),' +
@@ -83,14 +83,14 @@ test("Jina card links become posts with their own titles", () => {
     "[![Image 1: hero](https://cdn.example.org/a.jpg) ##### 智元发布GE-Act 2.0 新闻资讯 | 2026-09-20](https://example.org/blog/220.html \"智元发布GE-Act 2.0\")",
     "[![Image 2](https://cdn.example.org/b.png) ##### 小米18 Pro Max 测评 尾巴视频](http://example.org/blog/784.html)",
     "[![Image 3](https://cdn.example.org/c.png)](https://example.org/blog/carousel.html)",
-    "# [Introducing v6](http://example.org/blog/introducing-v6)",
+    "# [Announcing v6](http://example.org/blog/introducing-v6)",
     "[2026](http://example.org/blog/2026) [Algorithms & Theory](http://example.org/blog/label/algorithms) [Next page](http://example.org/blog/page/2)",
   ].join("\n\n");
   const out = fromMarkdown(md, "https://example.org", source({ url: "https://r.jina.ai/http://example.org/blog/", allowUrlPrefixes: ["https://example.org/blog/"] }));
   assert.deepEqual(out, [
     { url: "https://example.org/blog/220.html", title: "智元发布GE-Act 2.0" },
     { url: "https://example.org/blog/784.html", title: "小米18 Pro Max 测评 尾巴视频" },
-    { url: "https://example.org/blog/introducing-v6", title: "Introducing v6" },
+    { url: "https://example.org/blog/introducing-v6", title: "Announcing v6" },
   ]);
 });
 
@@ -122,7 +122,7 @@ test("the MiMo homepage lists its posts and model pages, not its menu", async ()
   const out = await fetchWebList(source({ url: `${site}/`, adapter: "mimo_home" }));
   assert.deepEqual(out, [
     { url: `${site}/blog/mimo-v2-6-tool-call-repetition`, title: "Diagnosing and Mitigating Tool-Call Repetition in MiMo-V2.6", excerpt: "A lesson from scaling RL: the reward blind spot in optimizing for correctness." },
-    { url: `${site}/mimo-v2-6`, title: "Introducing MiMo-V2.6 series", excerpt: "Frontier intelligence, all the modalities, built in public." },
+    { url: `${site}/mimo-v2-6`, title: "Announcing MiMo-V2.6 series", excerpt: "Frontier intelligence, all the modalities, built in public." },
     { url: `${site}/blog/mimo-v2-6-material-research`, title: "How Xiaomi MiMo-V2.6-Pro Boosts Productivity in New Materials R&D", excerpt: 'From literature review to "dry-lab" experiments.' },
     { url: `${site}/mimo-v2-5-pro/index.html`, title: "Xiaomi MiMo-V2.5-Pro", excerpt: "A leap in agentic and long horizon coherence." },
     { url: `${site}/blog/mimo-v2-flash-hss`, title: "MiMo Humanities and Social Sciences Capability Assessment", excerpt: null },
@@ -146,9 +146,9 @@ test("config entries a source kind does not implement are named, not ignored", (
 test("a listing that links other articles in its teasers takes only the links that begin a line", () => {
   // Axios Technology through Jina: each headline stands on its own line; its teaser links older stories inline.
   const md = [
-    "### [Amodei critics target Trump with hit piece before White House dinner](https://example.org/2026/09/27/amodei)",
+    "### [Amodei critics target Trump with hit piece before industry summit](https://example.org/2026/09/27/amodei)",
     "[![Image 3: Scoop](https://example.org/a.jpg)](https://example.org/2026/09/27/dinner)",
-    "[Scoop: Anthropic's Dario Amodei to have White House dinner](https://example.org/2026/09/27/dinner)",
+    "[Scoop: Nintendo's Nintendo executives to visit industry summit](https://example.org/2026/09/27/dinner)",
     "[How Ed Sheeran's U.S. tour went off the rails in 3 weeks](https://example.org/2026/09/25/sheeran)[![Image 12: Ed Sheeran](https://example.org/b.jpg)](https://example.org/2026/09/25/sheeran)",
     "Ed Sheeran's two Gillette Stadium shows were canceled Friday, capping a [chaotic three weeks](https://example.org/2026/09/15/sheeran-loop).",
     "**Why it matters:** AI is energy-hungry. [Political divides](https://example.org/2026/09/24/climate-politics) can slow progress.",
@@ -156,8 +156,8 @@ test("a listing that links other articles in its teasers takes only the links th
   ].join("\n\n");
   const config = { url: "https://r.jina.ai/https://example.org/technology", allowUrlPrefixes: ["https://example.org/2"], linksStartLine: true };
   assert.deepEqual(fromMarkdown(md, "https://example.org", source(config)).map((c) => c.title), [
-    "Amodei critics target Trump with hit piece before White House dinner",
-    "Scoop: Anthropic's Dario Amodei to have White House dinner",
+    "Amodei critics target Trump with hit piece before industry summit",
+    "Scoop: Nintendo's Nintendo executives to visit industry summit",
     "How Ed Sheeran's U.S. tour went off the rails in 3 weeks",
   ]);
   assert.equal(fromMarkdown(md, "https://example.org", source({ ...config, linksStartLine: undefined })).length, 5, "without the option prose links count");
