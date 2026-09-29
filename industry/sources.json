@@ -1,5 +1,5 @@
 {
-  "$comment": "示范信源：首次启动时导入（scripts/seed.ts），已存在的不会被覆盖。之后在后台“信源”里增删改。字段说明见 docs/customize.md。",
+  "$comment": "示范信源：首次启动时导入（scripts/seed.ts），已存在的不会被覆盖。之后在后台「信源」里增删改。字段说明见 docs/customize.md。含中英文游戏与游戏开发媒体。",
   "sources": [
     {
       "id": "rss-playstation-blog",
@@ -389,6 +389,91 @@
       "participation_mode": "editorial",
       "interval_minutes": 180,
       "tags": ["媒体", "独立游戏"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-yystv",
+      "name": "游研社",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.yystv.cn/rss/feed",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": ["媒体", "中文"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-gamelook",
+      "name": "游戏大观",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "http://www.gamelook.com.cn/feed/",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 90,
+      "tags": ["媒体", "中文", "商务"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-gameres",
+      "name": "GameRes 游资网",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.gameres.com/rss.xml",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 90,
+      "tags": ["媒体", "中文", "开发"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-uwa-blog",
+      "name": "UWA 博客",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blog.uwa4d.com/feed/",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": ["官方", "中文", "开发"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-indienova",
+      "name": "indienova",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://indienova.com/feed/",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": ["媒体", "中文", "独立游戏"],
       "site_fulltext": false,
       "syndicate_fulltext": false
     }
