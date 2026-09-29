@@ -578,6 +578,170 @@
       "tags": [ "开发", "中文" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
+    },
+    {
+      "id": "web-gamersky",
+      "name": "游民星空",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.gamersky.com/news/",
+        "_aihot": { "initialBackfillLimit": 8 },
+        "itemSelector": "ul.pictxt > li",
+        "linkSelector": "a.tt",
+        "titleSelector": "a.tt",
+        "allowUrlPrefixes": [
+          "https://www.gamersky.com/news/"
+        ],
+        "publishedAtSelector": ".time"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [ "媒体", "中文" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-3dm",
+      "name": "3DMGame",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.3dmgame.com/news/",
+        "_aihot": { "initialBackfillLimit": 8 },
+        "itemSelector": "li.selectpost",
+        "linkSelector": "a.bt",
+        "titleSelector": "a.bt",
+        "allowUrlPrefixes": [
+          "https://www.3dmgame.com/news/"
+        ],
+        "publishedAtSelector": ".time"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [ "媒体", "中文" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-ali213",
+      "name": "游侠网",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.ali213.net/news/",
+        "_aihot": { "initialBackfillLimit": 8 },
+        "itemSelector": ".itemout",
+        "linkSelector": "a.item",
+        "titleSelector": ".i1 span",
+        "allowUrlPrefixes": [
+          "https://www.ali213.net/news/html/"
+        ],
+        "publishedAtSelector": ".i3"
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [ "媒体", "中文" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-17173",
+      "name": "17173",
+      "kind": "web_list",
+      "config": {
+        "url": "https://news.17173.com/",
+        "_aihot": { "initialBackfillLimit": 8 },
+        "itemSelector": "ul.ptlist-news > li.item",
+        "linkSelector": ".tit a",
+        "titleSelector": ".tit a",
+        "allowUrlPrefixes": [
+          "https://news.17173.com/content/"
+        ]
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [ "媒体", "中文" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-tgbus",
+      "name": "电玩巴士",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.tgbus.com/list/news/",
+        "_aihot": { "initialBackfillLimit": 8 },
+        "itemSelector": ".special-infocard",
+        "linkSelector": "a",
+        "titleSelector": ".title",
+        "allowUrlPrefixes": [
+          "https://www.tgbus.com/news/"
+        ]
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [ "媒体", "中文" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-a9vg",
+      "name": "A9VG电玩部落",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.a9vg.com/list/news",
+        "_aihot": { "initialBackfillLimit": 8 },
+        "itemSelector": "li.a9-rich-card-list_item-gap",
+        "linkSelector": "a.a9-rich-card-list_item",
+        "titleSelector": ".a9-rich-card-list_label",
+        "allowUrlPrefixes": [
+          "https://www.a9vg.com/article/"
+        ]
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [ "媒体", "中文", "主机" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "web-tuoluo",
+      "name": "游戏陀螺",
+      "kind": "web_list",
+      "config": {
+        "url": "https://www.tuoluo.cn/article",
+        "_aihot": { "initialBackfillLimit": 8 },
+        "itemSelector": "ul.article_list > li.item",
+        "linkSelector": "a.title",
+        "titleSelector": "a.title",
+        "allowUrlPrefixes": [
+          "https://www.tuoluo.cn/article/detail-"
+        ]
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 90,
+      "tags": [ "媒体", "中文", "行业" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
     }
   ]
 }
