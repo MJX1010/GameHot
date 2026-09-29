@@ -7,14 +7,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://blog.playstation.com/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "sony",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": [ "官方", "主机" ],
+      "tags": [
+        "官方",
+        "主机"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -24,14 +29,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://news.xbox.com/en-us/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "microsoft",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": [ "官方", "主机" ],
+      "tags": [
+        "官方",
+        "主机"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -41,14 +51,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://store.steampowered.com/feeds/news.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "valve",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": [ "官方", "PC" ],
+      "tags": [
+        "官方",
+        "PC"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -58,14 +73,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://blog.unity.com/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "unity",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": [ "官方", "引擎" ],
+      "tags": [
+        "官方",
+        "引擎"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -75,14 +95,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.unrealengine.com/en-US/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "epic",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": [ "官方", "引擎" ],
+      "tags": [
+        "官方",
+        "引擎"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -92,14 +117,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://itch.io/blog.rss",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1_5",
       "first_party": true,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": [ "官方", "独立游戏" ],
+      "tags": [
+        "官方",
+        "独立游戏"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -109,14 +139,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.gamedeveloper.com/rss.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "开发" ],
+      "tags": [
+        "媒体",
+        "开发"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -126,14 +161,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.gamesindustry.biz/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "商务" ],
+      "tags": [
+        "媒体",
+        "商务"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -143,14 +183,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.gdcvault.com/rss",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1_5",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 360,
-      "tags": [ "会议", "开发" ],
+      "tags": [
+        "会议",
+        "开发"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -160,14 +205,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.ign.com/rss/articles/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体" ],
+      "tags": [
+        "媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -177,14 +226,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.polygon.com/rss/index.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体" ],
+      "tags": [
+        "媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -194,14 +247,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.rockpapershotgun.com/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "PC" ],
+      "tags": [
+        "媒体",
+        "PC"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -211,14 +269,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.eurogamer.net/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体" ],
+      "tags": [
+        "媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -228,14 +290,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.pcgamer.com/rss/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "PC" ],
+      "tags": [
+        "媒体",
+        "PC"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -245,14 +312,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.gamespot.com/feeds/news/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体" ],
+      "tags": [
+        "媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -262,14 +333,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.vg247.com/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体" ],
+      "tags": [
+        "媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -279,14 +354,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.gematsu.com/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "日系" ],
+      "tags": [
+        "媒体",
+        "日系"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -296,14 +376,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.theverge.com/rss/games/index.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体" ],
+      "tags": [
+        "媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -313,14 +397,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://techcrunch.com/category/gaming/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": [ "媒体", "商务" ],
+      "tags": [
+        "媒体",
+        "商务"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -330,14 +419,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.gcores.com/rss",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "中文" ],
+      "tags": [
+        "媒体",
+        "中文"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -347,14 +441,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.chuapp.com/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": [ "媒体", "中文", "行业" ],
+      "tags": [
+        "媒体",
+        "中文",
+        "行业"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -364,14 +464,18 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.destructoid.com/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 90,
-      "tags": [ "媒体" ],
+      "tags": [
+        "媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -381,14 +485,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.indiedb.com/news/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": [ "媒体", "独立游戏" ],
+      "tags": [
+        "媒体",
+        "独立游戏"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -398,14 +507,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.yystv.cn/rss/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "中文" ],
+      "tags": [
+        "媒体",
+        "中文"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -415,14 +529,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "http://www.gamelook.com.cn/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 90,
-      "tags": [ "媒体", "中文", "商务" ],
+      "tags": [
+        "媒体",
+        "中文",
+        "商务"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -432,14 +552,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.gameres.com/rss.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 90,
-      "tags": [ "媒体", "中文", "开发" ],
+      "tags": [
+        "媒体",
+        "中文",
+        "开发"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -449,14 +575,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://blog.uwa4d.com/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1_5",
       "first_party": true,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": [ "官方", "中文", "开发" ],
+      "tags": [
+        "官方",
+        "中文",
+        "开发"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -466,14 +598,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://indienova.com/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T2",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": [ "媒体", "中文", "独立游戏" ],
+      "tags": [
+        "媒体",
+        "中文",
+        "独立游戏"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -483,14 +621,21 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://forum.cocos.org/latest.rss",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1_5",
       "first_party": false,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": [ "社区", "中文", "开发", "引擎" ],
+      "tags": [
+        "社区",
+        "中文",
+        "开发",
+        "引擎"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -500,14 +645,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://blog.codingnow.com/atom.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1_5",
       "first_party": true,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 360,
-      "tags": [ "开发", "中文" ],
+      "tags": [
+        "开发",
+        "中文"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -517,14 +667,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.skywind.me/blog/feed",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1_5",
       "first_party": true,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 360,
-      "tags": [ "开发", "中文" ],
+      "tags": [
+        "开发",
+        "中文"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -534,14 +689,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.cnblogs.com/wyfx/rss",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1_5",
       "first_party": true,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 360,
-      "tags": [ "官方", "中文", "开发" ],
+      "tags": [
+        "官方",
+        "中文",
+        "开发"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -551,14 +712,20 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://latias94.github.io/atom.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1_5",
       "first_party": true,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 360,
-      "tags": [ "开发", "中文", "独立游戏" ],
+      "tags": [
+        "开发",
+        "中文",
+        "独立游戏"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -568,14 +735,19 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://shrekshao.github.io/feed.xml",
-        "_aihot": { "initialBackfillLimit": 8 }
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
       },
       "tier": "T1_5",
       "first_party": true,
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 360,
-      "tags": [ "开发", "中文" ],
+      "tags": [
+        "开发",
+        "中文"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -585,7 +757,9 @@
       "kind": "web_list",
       "config": {
         "url": "https://www.gamersky.com/news/",
-        "_aihot": { "initialBackfillLimit": 8 },
+        "_aihot": {
+          "initialBackfillLimit": 8
+        },
         "itemSelector": "ul.pictxt > li",
         "linkSelector": "a.tt",
         "titleSelector": "a.tt",
@@ -599,7 +773,10 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "中文" ],
+      "tags": [
+        "媒体",
+        "中文"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -609,7 +786,9 @@
       "kind": "web_list",
       "config": {
         "url": "https://www.3dmgame.com/news/",
-        "_aihot": { "initialBackfillLimit": 8 },
+        "_aihot": {
+          "initialBackfillLimit": 8
+        },
         "itemSelector": "li.selectpost",
         "linkSelector": "a.bt",
         "titleSelector": "a.bt",
@@ -623,7 +802,10 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "中文" ],
+      "tags": [
+        "媒体",
+        "中文"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -633,7 +815,9 @@
       "kind": "web_list",
       "config": {
         "url": "https://www.ali213.net/news/",
-        "_aihot": { "initialBackfillLimit": 8 },
+        "_aihot": {
+          "initialBackfillLimit": 8
+        },
         "itemSelector": ".itemout",
         "linkSelector": "a.item",
         "titleSelector": ".i1 span",
@@ -647,7 +831,10 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "中文" ],
+      "tags": [
+        "媒体",
+        "中文"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -657,7 +844,9 @@
       "kind": "web_list",
       "config": {
         "url": "https://news.17173.com/",
-        "_aihot": { "initialBackfillLimit": 8 },
+        "_aihot": {
+          "initialBackfillLimit": 8
+        },
         "itemSelector": "ul.ptlist-news > li.item",
         "linkSelector": ".tit a",
         "titleSelector": ".tit a",
@@ -670,7 +859,10 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "中文" ],
+      "tags": [
+        "媒体",
+        "中文"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -680,7 +872,9 @@
       "kind": "web_list",
       "config": {
         "url": "https://www.tgbus.com/list/news/",
-        "_aihot": { "initialBackfillLimit": 8 },
+        "_aihot": {
+          "initialBackfillLimit": 8
+        },
         "itemSelector": ".special-infocard",
         "linkSelector": "a",
         "titleSelector": ".title",
@@ -693,7 +887,10 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "中文" ],
+      "tags": [
+        "媒体",
+        "中文"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -703,7 +900,9 @@
       "kind": "web_list",
       "config": {
         "url": "https://www.a9vg.com/list/news",
-        "_aihot": { "initialBackfillLimit": 8 },
+        "_aihot": {
+          "initialBackfillLimit": 8
+        },
         "itemSelector": "li.a9-rich-card-list_item-gap",
         "linkSelector": "a.a9-rich-card-list_item",
         "titleSelector": ".a9-rich-card-list_label",
@@ -716,7 +915,11 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [ "媒体", "中文", "主机" ],
+      "tags": [
+        "媒体",
+        "中文",
+        "主机"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -726,7 +929,9 @@
       "kind": "web_list",
       "config": {
         "url": "https://www.tuoluo.cn/article",
-        "_aihot": { "initialBackfillLimit": 8 },
+        "_aihot": {
+          "initialBackfillLimit": 8
+        },
         "itemSelector": "ul.article_list > li.item",
         "linkSelector": "a.title",
         "titleSelector": "a.title",
@@ -739,7 +944,298 @@
       "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 90,
-      "tags": [ "媒体", "中文", "行业" ],
+      "tags": [
+        "媒体",
+        "中文",
+        "行业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-80-level",
+      "name": "80 Level",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://80.lv/feed",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "美术",
+        "开发",
+        "技术"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-godot-blog",
+      "name": "Godot Engine Blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://godotengine.org/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "引擎"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-gameanim",
+      "name": "Game Anim",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.gameanim.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "美术",
+        "动画"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-lostgarden",
+      "name": "Lost Garden",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://lostgarden.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "策划",
+        "设计"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-asawicki",
+      "name": "Adam Sawicki",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.asawicki.info/news_rss.php",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "技术",
+        "图形"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-bartwronski",
+      "name": "Bart Wronski",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://bartwronski.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "技术",
+        "图形"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-graphicrants",
+      "name": "Graphic Rants",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://graphicrants.blogspot.com/feeds/posts/default",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "技术",
+        "图形"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-gpuopen",
+      "name": "GPUOpen",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://gpuopen.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "技术"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-defold",
+      "name": "Defold",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.defold.com/feed.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "引擎"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-bevy",
+      "name": "Bevy Engine",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://bevyengine.org/atom.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "引擎"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-digitalfoundry",
+      "name": "Digital Foundry",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.digitalfoundry.net/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "技术",
+        "媒体"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-mjp",
+      "name": "The Real MJP",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://mynameismjp.wordpress.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "技术",
+        "图形"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-fgiesen",
+      "name": "The ryg blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://fgiesen.wordpress.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "技术",
+        "图形"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     }
