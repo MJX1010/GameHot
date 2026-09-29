@@ -478,23 +478,6 @@
       "syndicate_fulltext": false
     },
     {
-      "id": "rss-appinn-games",
-      "name": "小众软件 · 游戏",
-      "kind": "rss",
-      "config": {
-        "feedUrl": "https://www.appinn.com/category/games/feed/",
-        "_aihot": { "initialBackfillLimit": 8 }
-      },
-      "tier": "T2",
-      "first_party": false,
-      "owner_entity_id": null,
-      "participation_mode": "editorial",
-      "interval_minutes": 120,
-      "tags": [ "媒体", "中文", "独立游戏" ],
-      "site_fulltext": false,
-      "syndicate_fulltext": false
-    },
-    {
       "id": "rss-cocos-forum",
       "name": "Cocos 中文社区",
       "kind": "rss",
@@ -576,6 +559,23 @@
       "participation_mode": "editorial",
       "interval_minutes": 360,
       "tags": [ "开发", "中文", "独立游戏" ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-shrekshao",
+      "name": "狄学长",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://shrekshao.github.io/feed.xml",
+        "_aihot": { "initialBackfillLimit": 8 }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [ "开发", "中文" ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     }
