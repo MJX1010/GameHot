@@ -1,4 +1,100 @@
 <p align="center">
+  <img src="industry/brand/icon.png" alt="GameHot" width="128" height="128">
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-176b75?style=flat-square" alt="MIT License"></a>
+  <img src="https://img.shields.io/badge/Node.js-24-176b75?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js 24">
+  <img src="https://img.shields.io/badge/PostgreSQL-17-176b75?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL 17">
+  <img src="https://img.shields.io/badge/Docker-Compose-176b75?style=flat-square&logo=docker&logoColor=white" alt="Docker Compose">
+</p>
+
+<p align="center">
+  <b>GameHot — 游戏与游戏开发动态</b><br>
+  自动盯信源、摘要打分、聚成事件、出日报。
+</p>
+
+<p align="center">
+  <a href="#跑起来">跑起来</a> ·
+  <a href="#本仓库改了什么">本仓库改了什么</a> ·
+  <a href="#文档">文档</a> ·
+  <a href="#许可">许可</a>
+</p>
+
+<br>
+
+## 这是什么
+
+[GameHot](https://github.com/MJX1010/GameHot) 面向**游戏资讯**和**游戏开发**（引擎、工具、技术美术、工作室动态）。从中英文媒体、门户列表、开发者博客、平台商店等信源抓取，用模型筛一遍、打分精选，把同一件事的多篇报道归并，每天早上出日报。
+
+本仓库在 [AIHOT](https://github.com/KKKKhazix/AIHOT) 开源框架上定制；框架能力（采集、精选、聚簇、热度、后台）见文末折叠区，此处不重复。
+
+## 覆盖什么
+
+| 方向 | 说明 |
+|---|---|
+| **玩家向** | 发行与更新、行业政策、电竞与社区、平台商店动态 |
+| **开发向** | 引擎/工具、技术与美术分享、工作室与商务 |
+| **分类** | 发行 · 行业 · 电竞 · 工具引擎 · 工作室 · 技术美术 |
+| **信源示例** | 机核/触乐/游研社、游民·3DM 等门户列表、GDC/80 Level/Godot 等开发源、Steam/Epic/TapTap 等平台信号 |
+
+商店营销类信源多为热度信号（降权），一手资讯仍优先编辑向源。当前种子约 60+ 条，见 [`industry/sources.json`](industry/sources.json)。
+
+已关闭 AI 行业专属模块（模型榜、Codex 重置监控）。
+
+## 跑起来
+
+需要 [Docker](https://docs.docker.com/get-docker/)，以及一个 OpenAI 兼容的模型 API Key（DeepSeek、千问、智谱等均可）。
+
+```bash
+git clone https://github.com/MJX1010/GameHot.git
+cd GameHot
+node scripts/init-env.ts --llm-key <你的模型 API Key>
+docker compose up -d --build
+```
+
+打开 <http://localhost:3000>。后台在 `/admin`，管理员密码在 `.env` 的 `ADMIN_PASSWORD`。首次导入大约半小时处理完。
+
+更多部署说明见 [docs/deploy.md](docs/deploy.md)。
+
+## 本仓库改了什么
+
+定制几乎都在 [`industry/`](industry/)，代码主体未改：
+
+| 位置 | 内容 |
+|---|---|
+| `site.ts` | 站名 GameHot、文案、MCP 前缀 `gamehot`、爬虫名 GameHotBot |
+| `taxonomy.ts` / `topics.json` | 游戏向分类、标签与主体 |
+| `sources.json` | 游戏 / 游戏开发信源种子 |
+| `features.ts` | 关闭 leaderboard、codexResetMonitor |
+| `brand/` | GameHot 图标与 Logo |
+| `prompts/` | 按游戏域调整的精选与写作标准 |
+
+换行业或继续调信源，仍可按 [docs/customize.md](docs/customize.md) 操作。
+
+## 文档
+
+| 文档 | 内容 |
+|---|---|
+| [定制](docs/customize.md) | 站名、分类、信源、提示词、门槛、品牌 |
+| [信源](docs/sources.md) | 六种信源怎么配 |
+| [精选与校准](docs/selection.md) | 入选流程与样本校准 |
+| [部署](docs/deploy.md) | Docker、域名、大陆环境、备份 |
+| [架构](docs/architecture.md) | 进程与目录 |
+
+技术栈：Node.js 24 · TypeScript · React Router（SSR）· Fastify · PostgreSQL · pg-boss · Tailwind · Docker Compose。
+
+## 许可
+
+代码使用 [MIT 许可证](LICENSE)。基于 [AIHOT](https://github.com/KKKKhazix/AIHOT)；**请勿使用 AIHOT 的名字与 Logo**。字体与第三方标志见 [NOTICE](NOTICE)。
+
+---
+
+<details>
+<summary><b>关于上游 AIHOT 框架（原 README，点击展开）</b></summary>
+
+<br>
+<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.png">
     <img src="docs/assets/banner-light.png" alt="AIHOT：每个行业，都可以有自己的 AIHOT。很多条信源流进中间的精选，再分给法律、人力资源、金融等各个行业" width="100%">
@@ -174,3 +270,5 @@ AIHOT 曾经只是我无数个深夜里，一个很小、很小的念头。
 ---
 
 <sub>**In English:** AIHOT ([aihot.news](https://aihot.news)) is an AI news site that collects from many sources, lets a language model filter and score every item twice, writes Chinese headlines and summaries, clusters reports of the same story into one event, ranks events by how many independent sources discuss them, and publishes a daily briefing. This repository is its complete framework, including every prompt and threshold. Hand it to your coding agent with `AGENTS.md` and `docs/customize.md` to turn it into a news site for your own field. The documentation is in Chinese.</sub>
+
+</details>
