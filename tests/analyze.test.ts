@@ -99,7 +99,7 @@ test("a selected item: prefilter, two scores, the content understanding and the 
   assert.deepEqual(calls("CLEAR").sort(), ["prefilter", "score", "score", "structure", "understand"]);
   const r = await row(id);
   assert.deepEqual([r.title_zh, r.reason_zh, r.category, r.receipt_ids.length], ["理解标题 CLEAR", "理由 CLEAR", "releases", 5]);
-  assert.deepEqual(r.tags, ["游戏发行", "独立游戏", "引擎", "Nintendo"], "vocabulary tags (synonyms mapped, unknown dropped) and the subject's tag");
+  assert.deepEqual(r.tags, ["游戏发行", "独立游戏", "工具引擎", "Nintendo"], "vocabulary tags (synonyms mapped, unknown dropped) and the subject's tag");
   assert.deepEqual(r.subjects, ["nintendo"]);
   assert.deepEqual([r.output.writer, r.output.itemType, r.output.prefilter.label, r.output.fact.title], ["understand", "game_release", "PASS", "事实 CLEAR"]);
   const score = requests.find((q) => q.marker === "CLEAR" && q.step === "score")!;
