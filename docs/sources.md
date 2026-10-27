@@ -62,6 +62,19 @@
 - **一手** `first_party`：来源是当事方自己。事件页会优先展示一手报道。
 - **全文**：`site_fulltext` 决定站内能不能显示全文，`syndicate_fulltext` 决定全文 RSS 能不能带正文。两者**默认都关**，只显示摘要和原文链接；来源明确允许时再打开。公众号、付费墙内容不会因为技术上抓得到就获得全文展示。
 
+## GameHot 种子信源分组（节选）
+
+完整列表以 `industry/sources.json` 为准；线上以后台 DB 为准（种子只补缺失 ID）。
+
+| 分组 | 代表信源 | 分级 / 参与 |
+|---|---|---|
+| 平台官方 | PlayStation Blog、Xbox Wire、Steam News、任天堂官网更新（日本，已过滤招聘类） | T1 / editorial |
+| 行业与商业 | GamesIndustry.biz、Game Developer、Game File、Aftermath、Deconstructor of Fun、MobileGamer.biz | T2 / editorial |
+| 欧美 / 日本媒体 | IGN、Eurogamer、Nintendo Life、4Gamer.net、AUTOMATON（日文）、Gematsu | T2 / editorial |
+| 中文媒体 | 机核、触乐、游研社、GameLook、GameRes 及门户列表 | T2 / editorial |
+| 引擎与图形技术 | Unity/Unreal/Godot 官方、DirectX Blog、GPUOpen、Aras P、MJP、Self Shadow、Interplay of Light、floooh、JCGT | T1 / T1_5 / editorial |
+| 商店热度 | Steam 新发行/精选、Epic 免费游戏、TapTap 榜单 | T2 / hot_signal |
+
 ## 抓取频率
 
 每个信源有自己的抓取间隔。每天 04:20 会按近 7 天的产出自动调整：产出多的抓得勤，最短 15 分钟；免费信源最长 60 分钟，按次计费的信源最长 120–180 分钟。

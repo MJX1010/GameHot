@@ -1455,6 +1455,352 @@
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-nintendo-jp-whatsnew",
+      "name": "任天堂官网更新（日本）",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.nintendo.co.jp/news/whatsnew.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        },
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "採用",
+            "募集要項",
+            "エントリー",
+            "懇談会",
+            "ポートフォリオ相談会"
+          ]
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "nintendo",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "官方",
+        "主机",
+        "日系"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-directx-blog",
+      "name": "Microsoft DirectX Developer Blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://devblogs.microsoft.com/directx/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "microsoft",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "技术",
+        "图形"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-gamefile",
+      "name": "Game File (Stephen Totilo)",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.gamefile.news/feed",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "媒体",
+        "行业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-aftermath",
+      "name": "Aftermath",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://aftermath.site/rss/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 90,
+      "tags": [
+        "媒体",
+        "行业"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-deconstructoroffun",
+      "name": "Deconstructor of Fun",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.deconstructoroffun.com/blog?format=rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "媒体",
+        "商务",
+        "分析"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-mobilegamer-biz",
+      "name": "MobileGamer.biz",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://mobilegamer.biz/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": [
+        "媒体",
+        "移动",
+        "商务"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-nintendolife",
+      "name": "Nintendo Life",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.nintendolife.com/feeds/latest",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "媒体",
+        "主机"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-automaton-jp",
+      "name": "AUTOMATON（日文）",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://automaton-media.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 90,
+      "tags": [
+        "媒体",
+        "日系"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-4gamer",
+      "name": "4Gamer.net 新闻",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.4gamer.net/rss/news_topics.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T2",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "媒体",
+        "日系"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-aras-p",
+      "name": "Aras Pranckevičius",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://aras-p.info/atom.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "技术",
+        "图形",
+        "引擎"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-therealmjp",
+      "name": "MJP (therealmjp.github.io)",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://therealmjp.github.io/index.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "技术",
+        "图形"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-selfshadow",
+      "name": "Self Shadow (SIGGRAPH 资料汇总)",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blog.selfshadow.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 720,
+      "tags": [
+        "技术",
+        "图形",
+        "会议"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-interplayoflight",
+      "name": "Interplay of Light (Kostas Anagnostou)",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://interplayoflight.wordpress.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "技术",
+        "图形"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-floooh",
+      "name": "The Brain Dump (floooh / sokol)",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://floooh.github.io/feed.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 720,
+      "tags": [
+        "技术",
+        "引擎"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-jcgt",
+      "name": "Journal of Computer Graphics Techniques",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://jcgt.org/feed.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1_5",
+      "first_party": false,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 720,
+      "tags": [
+        "技术",
+        "图形",
+        "论文"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
     }
   ]
 }

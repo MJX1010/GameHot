@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <img src="industry/brand/icon.png" alt="GameHot" width="128" height="128">
 </p>
 
@@ -36,9 +36,9 @@
 | **玩家向** | 发行与更新、行业政策、电竞与社区、平台商店动态 |
 | **开发向** | 引擎/工具、技术与美术分享、工作室与商务 |
 | **分类** | 发行 · 行业 · 电竞 · 工具引擎 · 工作室 · 技术美术 |
-| **信源示例** | 机核/触乐/游研社、游民·3DM 等门户列表、GDC/80 Level/Godot 等开发源、Steam/Epic/TapTap 等平台信号 |
+| **信源示例** | 机核/触乐/游研社、游民·3DM 等门户列表；任天堂/PlayStation/Xbox 官方；Game File/Aftermath/4Gamer/AUTOMATON 等媒体；GDC/80 Level/Godot/DirectX/JCGT 等开发与图形技术源；Steam/Epic/TapTap 等平台信号 |
 
-商店营销类信源多为热度信号（降权），一手资讯仍优先编辑向源。当前种子约 60+ 条，见 [`industry/sources.json`](industry/sources.json)。
+商店营销类信源多为热度信号（降权），一手资讯仍优先编辑向源。当前种子 76 条，见 [`industry/sources.json`](industry/sources.json)。
 
 已关闭 AI 行业专属模块（模型榜、Codex 重置监控）。
 
