@@ -72,7 +72,7 @@
 | 行业与商业 | GamesIndustry.biz、Game Developer、Game File、Aftermath、Deconstructor of Fun、MobileGamer.biz | T2 / editorial |
 | 欧美 / 日本媒体 | IGN、Eurogamer、Nintendo Life、4Gamer.net、AUTOMATON（日文）、Gematsu | T2 / editorial |
 | 中文媒体 | 机核、触乐、游研社、GameLook、GameRes 及门户列表 | T2 / editorial |
-| 引擎与图形技术 | Unity/Unreal/Godot 官方、DirectX Blog、GPUOpen、Aras P、MJP、Self Shadow、Interplay of Light、floooh、JCGT | T1 / T1_5 / editorial |
+| 引擎与图形技术 | Unity/Unreal/Godot/Cocos 官方与发布、Blender 新闻与开发博客、Spine/Marmoset、Stride/O3DE/Phaser/Babylon/libGDX、AWS Game Tech、DirectX/GPUOpen 与图形博客 | T1 / T1_5 / editorial |
 | 商店热度 | Steam 新发行/精选、Epic 免费游戏、TapTap 榜单 | T2 / hot_signal |
 
 ## 抓取频率

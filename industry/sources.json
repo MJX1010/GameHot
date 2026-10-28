@@ -1801,6 +1801,259 @@
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "工具",
+        "美术"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "id": "rss-blender-news",
+      "name": "Blender News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.blender.org/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      }
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "工具",
+        "技术",
+        "美术"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "id": "rss-blender-developers",
+      "name": "Blender Developers Blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://code.blender.org/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      }
+    },
+    {
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "官方",
+        "工具",
+        "美术"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "id": "rss-marmoset",
+      "name": "Marmoset Toolbag",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://marmoset.co/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      }
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "工具",
+        "动画"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "id": "rss-spine",
+      "name": "Spine (Esoteric Software)",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://esotericsoftware.com/blog/rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      }
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "引擎"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "id": "rss-o3de",
+      "name": "O3DE",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://o3de.org/feed",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      }
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "引擎"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "id": "rss-stride",
+      "name": "Stride Game Engine",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://stride3d.net/feed.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      }
+    },
+    {
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "引擎",
+        "Web"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "id": "rss-phaser-news",
+      "name": "Phaser News",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://phaser.io/news.rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      }
+    },
+    {
+      "tier": "T1_5",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "引擎",
+        "Web",
+        "图形"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "id": "rss-babylonjs",
+      "name": "Babylon.js",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://babylonjs.medium.com/feed",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      }
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 360,
+      "tags": [
+        "官方",
+        "引擎"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "id": "rss-libgdx",
+      "name": "libGDX",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://libgdx.com/feed",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      }
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": "unity",
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "引擎",
+        "工具"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "id": "rss-unity-industry",
+      "name": "Unity Blog · Industry",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://unity.com/blog/rss/industry",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      }
+    },
+    {
+      "tier": "T1",
+      "first_party": true,
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 180,
+      "tags": [
+        "官方",
+        "技术",
+        "云",
+        "开发"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false,
+      "id": "rss-aws-gametech",
+      "name": "AWS Game Tech Blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://aws.amazon.com/blogs/gametech/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      }
     }
   ]
 }
