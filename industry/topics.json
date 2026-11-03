@@ -1,5 +1,4 @@
 {
-  "exportedAt": "2026-09-29",
   "groups": [
     {
       "key": "company",
@@ -23,216 +22,221 @@
       "name": "Nintendo",
       "group": "company",
       "entityId": "nintendo",
-      "tags": ["Nintendo", "Switch", "entity:nintendo"],
-      "definition": "任天堂主机、第一方作品、Switch 平台与公司战略的持续追踪。",
-      "related": ["sony", "microsoft", "releases"]
+      "aliases": [
+        "Switch"
+      ],
+      "definition": "任天堂主机、第一方作品、Switch 平台与公司战略的持续追踪。"
     },
     {
       "slug": "sony",
       "name": "Sony / PlayStation",
       "group": "company",
       "entityId": "sony",
-      "tags": ["Sony", "PlayStation", "entity:sony"],
-      "definition": "PlayStation 平台、第一方工作室与索尼互动娱乐的产品与政策动态。",
-      "related": ["nintendo", "microsoft", "releases"]
+      "definition": "PlayStation 平台、第一方工作室与索尼互动娱乐的产品与政策动态。"
     },
     {
       "slug": "microsoft",
       "name": "Microsoft / Xbox",
       "group": "company",
       "entityId": "microsoft",
-      "tags": ["Microsoft", "Xbox", "entity:microsoft"],
-      "definition": "Xbox、Game Pass、微软第一方与 Activision/Blizzard/Bethesda 相关动态。",
-      "related": ["sony", "nintendo", "studios-business"]
+      "definition": "Xbox、Game Pass、微软第一方与 Activision/Blizzard/Bethesda 相关动态。"
     },
     {
       "slug": "valve",
       "name": "Valve / Steam",
       "group": "company",
       "entityId": "valve",
-      "tags": ["Valve", "Steam", "entity:valve"],
-      "definition": "Steam 平台政策、Steam Deck、Valve 自研与商店生态变化。",
-      "related": ["epic", "pc-gaming", "releases"]
+      "definition": "Steam 平台政策、Steam Deck、Valve 自研与商店生态变化。"
     },
     {
       "slug": "epic",
       "name": "Epic Games",
       "group": "company",
       "entityId": "epic",
-      "tags": ["Epic", "Unreal", "entity:epic"],
-      "definition": "Epic Games Store、Fortnite、Unreal Engine 与开发者生态。",
-      "related": ["unity", "tools-engines", "unreal"]
+      "aliases": [
+        "Epic",
+        "Unreal"
+      ],
+      "definition": "Epic Games Store、Fortnite、Unreal Engine 与开发者生态。"
     },
     {
       "slug": "unity",
       "name": "Unity",
       "group": "company",
       "entityId": "unity",
-      "tags": ["Unity", "entity:unity"],
-      "definition": "Unity 引擎版本、定价与运行时政策、编辑器与服务更新。",
-      "related": ["epic", "tools-engines", "indie"]
+      "definition": "Unity 引擎版本、定价与运行时政策、编辑器与服务更新。"
     },
     {
       "slug": "tencent",
       "name": "腾讯游戏",
       "group": "company",
       "entityId": "tencent",
-      "tags": ["Tencent", "entity:tencent"],
-      "definition": "腾讯游戏发行、投资与自研工作室相关动态。",
-      "related": ["netease", "mihoyo", "studios-business"]
+      "aliases": [
+        "Tencent"
+      ],
+      "definition": "腾讯游戏发行、投资与自研工作室相关动态。"
     },
     {
       "slug": "netease",
       "name": "网易游戏",
       "group": "company",
       "entityId": "netease",
-      "tags": ["NetEase", "entity:netease"],
-      "definition": "网易游戏自研与发行、海外业务与工作室动态。",
-      "related": ["tencent", "mihoyo", "studios-business"]
+      "aliases": [
+        "NetEase"
+      ],
+      "definition": "网易游戏自研与发行、海外业务与工作室动态。"
     },
     {
       "slug": "mihoyo",
       "name": "米哈游 / HoYoverse",
       "group": "company",
       "entityId": "mihoyo",
-      "tags": ["miHoYo", "entity:mihoyo"],
-      "definition": "米哈游与 HoYoverse 旗下产品、版本与公司动态。",
-      "related": ["tencent", "netease", "mobile"]
+      "aliases": [
+        "miHoYo",
+        "miHoYo / HoYoverse"
+      ],
+      "definition": "米哈游与 HoYoverse 旗下产品、版本与公司动态。"
     },
     {
       "slug": "riot",
       "name": "Riot Games",
       "group": "company",
       "entityId": "riot",
-      "tags": ["entity:riot"],
-      "definition": "英雄联盟、Valorant 等 Riot 产品与电竞赛事生态。",
-      "related": ["esports", "blizzard"]
+      "definition": "英雄联盟、Valorant 等 Riot 产品与电竞赛事生态。"
     },
     {
       "slug": "tools-engines",
       "name": "引擎与工具",
       "group": "field",
-      "entityId": null,
-      "tags": ["引擎", "工具链", "工具引擎"],
-      "definition": "游戏引擎、中间件、编辑器与制作管线工具的发布与实践。",
-      "related": ["unity", "unreal", "tech-art"]
+      "tags": [
+        "引擎",
+        "工具链",
+        "工具引擎"
+      ],
+      "definition": "游戏引擎、中间件、编辑器与制作管线工具的发布与实践。"
     },
     {
       "slug": "unreal",
       "name": "Unreal Engine",
       "group": "field",
-      "entityId": null,
-      "tags": ["Unreal", "引擎"],
-      "definition": "Unreal Engine 版本、功能与学习资源追踪。",
-      "related": ["epic", "tools-engines", "tech-art"]
+      "tags": [
+        "Unreal",
+        "引擎"
+      ],
+      "definition": "Unreal Engine 版本、功能与学习资源追踪。"
     },
     {
       "slug": "indie",
       "name": "独立游戏",
       "group": "field",
-      "entityId": null,
-      "tags": ["独立游戏"],
-      "definition": "独立游戏发行、融资、展会与制作经验。",
-      "related": ["releases", "itch", "tools-engines"]
+      "tags": [
+        "独立游戏"
+      ],
+      "definition": "独立游戏发行、融资、展会与制作经验。"
     },
     {
       "slug": "pc-gaming",
       "name": "PC 游戏",
       "group": "field",
-      "entityId": null,
-      "tags": ["PC", "Steam"],
-      "definition": "PC 平台发行、硬件与商店生态相关动态。",
-      "related": ["valve", "releases"]
+      "tags": [
+        "PC",
+        "Steam"
+      ],
+      "definition": "PC 平台发行、硬件与商店生态相关动态。"
     },
     {
       "slug": "mobile",
       "name": "移动游戏",
       "group": "field",
-      "entityId": null,
-      "tags": ["移动"],
-      "definition": "手游发行、渠道政策、LiveOps 与市场数据。",
-      "related": ["mihoyo", "tencent", "netease"]
+      "tags": [
+        "移动"
+      ],
+      "definition": "手游发行、渠道政策、LiveOps 与市场数据。"
     },
     {
       "slug": "esports",
       "name": "电竞",
       "group": "field",
-      "entityId": null,
-      "tags": ["电竞", "电竞社区"],
-      "definition": "电竞赛事、战队与选手、相关产品更新。",
-      "related": ["riot", "community"]
+      "tags": [
+        "电竞",
+        "电竞社区"
+      ],
+      "definition": "电竞赛事、战队与选手、相关产品更新。"
     },
     {
       "slug": "tech-art",
       "name": "技术美术",
       "group": "field",
-      "entityId": null,
-      "tags": ["渲染", "技术文章", "教程实践"],
-      "definition": "渲染、玩法系统、网络同步、美术管线等技术分享。",
-      "related": ["tools-engines", "gdc"]
+      "tags": [
+        "渲染",
+        "技术文章",
+        "教程实践"
+      ],
+      "definition": "渲染、玩法系统、网络同步、美术管线等技术分享。"
     },
     {
       "slug": "releases",
       "name": "发行与更新",
       "group": "genre",
-      "entityId": null,
-      "tags": ["游戏发行", "产品更新"],
-      "definition": "新作发行、重大版本与重要补丁。",
-      "related": ["reviews", "pc-gaming"]
+      "tags": [
+        "游戏发行",
+        "产品更新"
+      ],
+      "definition": "新作发行、重大版本与重要补丁。"
     },
     {
       "slug": "studios-business",
       "name": "工作室与商务",
       "group": "genre",
-      "entityId": null,
-      "tags": ["行业动态"],
-      "definition": "融资并购、人事、发行协议与财报。",
-      "related": ["tencent", "microsoft"]
+      "tags": [
+        "行业动态"
+      ],
+      "definition": "融资并购、人事、发行协议与财报。"
     },
     {
       "slug": "reviews",
       "name": "评测与导购",
       "group": "genre",
-      "entityId": null,
-      "tags": ["评测导购"],
-      "definition": "深度评测、横向对比与购买决策相关内容。",
-      "related": ["releases"]
+      "tags": [
+        "评测导购"
+      ],
+      "definition": "深度评测、横向对比与购买决策相关内容。"
     },
     {
       "slug": "opinion",
       "name": "观点与复盘",
       "group": "genre",
-      "entityId": null,
-      "tags": ["大佬观点"],
-      "definition": "行业评论、制作人访谈、项目复盘与趋势判断。",
-      "related": ["studios-business", "tech-art"]
+      "tags": [
+        "大佬观点"
+      ],
+      "definition": "行业评论、制作人访谈、项目复盘与趋势判断。"
     },
     {
       "slug": "community",
       "name": "社区与模组",
       "group": "genre",
-      "entityId": null,
-      "tags": ["电竞社区"],
-      "definition": "玩家社区现象、模组文化与创作者生态。",
-      "related": ["esports", "indie"]
+      "tags": [
+        "电竞社区"
+      ],
+      "definition": "玩家社区现象、模组文化与创作者生态。"
     },
     {
       "slug": "policy",
       "name": "政策与监管",
       "group": "genre",
-      "entityId": null,
-      "tags": ["政策监管"],
-      "definition": "版号、评级、平台商店政策与监管动态。",
-      "related": ["studios-business", "industry"]
+      "tags": [
+        "政策监管"
+      ],
+      "definition": "版号、评级、平台商店政策与监管动态。"
     },
     {
       "slug": "gdc",
       "name": "GDC 与会议",
       "group": "genre",
-      "entityId": null,
-      "tags": ["技术文章"],
-      "definition": "GDC 及其他行业会议的演讲、新闻与纪要。",
-      "related": ["tech-art", "tools-engines"]
+      "tags": [
+        "技术文章"
+      ],
+      "definition": "GDC 及其他行业会议的演讲、新闻与纪要。"
     }
   ]
 }

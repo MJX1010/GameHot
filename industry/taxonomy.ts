@@ -4,17 +4,31 @@
 
 /**
  * 网页上的类别（筛选栏、卡片角标、RSS 分类订阅）。key 是网址和接口里的身份，上线后不要改。
- * section 是日报里的分节标题（几个类别可以共用一节，按这里的顺序排）；guide 告诉模型怎么归类。
+ * section 是日报里的分节标题（几个类别可以共用一节，按这里的顺序排）；guide 告诉结构抽取模型这一类收什么、
+ * 和相邻类别的边界在哪（总的归类原则写在 prompts/structure.md 里）。
+ * commentary 标出评论类（教程、观点）：日报写过的事又有评论类的后续报道，只占一行快讯（报道它的信源够多时除外）。
  * 没归上类的资料在日报里放进第一个 key 为 industry 的类别所在的节（没有就放最后一节）。
+ * tagColor 是飞书推送卡片里跟在标题后面的这一类小标签的颜色（飞书 text_tag 的颜色名）。
+ * feedLabel 是分类 RSS 标题里的名字（不写就用 label）。公开接口、RSS 和 MCP 里要把一类并进另一类发布，写在站点设置里（site/site.ts 的 PUBLIC_CATEGORIES）。
  */
 export const CATEGORIES = [
-  { key: "releases", label: "发行", section: "发行与更新", guide: "新作发行、全球/区域上线、重大更新、赛季/资料片、重要补丁与平衡性调整、停运与下架" },
-  { key: "industry", label: "行业", section: "行业动态", guide: "平台政策、排行榜与市场数据、监管与评级、诉讼、硬件主机策略、渠道与发行政策" },
-  { key: "esports", label: "电竞", section: "电竞与社区", guide: "电竞赛事、战队与选手转会、社区现象、模组/同人文化、直播与创作者生态" },
-  { key: "tools-engines", label: "工具引擎", section: "引擎与工具", guide: "游戏引擎、中间件、编辑器、SDK、构建与管线工具、平台开发者文档与版本发布" },
-  { key: "studios", label: "工作室", section: "工作室与商务", guide: "工作室成立/关闭、融资并购、人事任命、发行协议、财报与商务合作" },
-  { key: "tech-art", label: "技术美术", section: "技术与观点", guide: "渲染/玩法/网络技术分享、美术管线、GDC 级演讲、深度评测、观点与复盘、教程实践" },
-] as const;
+  { key: "releases", tagColor: "indigo", label: "发行", feedLabel: "游戏发行", section: "发行与更新", guide: "新作发行、全球/区域上线、重大更新、赛季/资料片、重要补丁与平衡性调整、停运与下架。只是回顾旧作或做攻略不算发行。" },
+  { key: "industry", tagColor: "orange", label: "行业", feedLabel: "游戏行业", section: "行业动态", guide: "平台政策、排行榜与市场数据、监管与评级、诉讼、硬件主机策略、渠道与发行政策。新闻由当事人发帖、带有态度，也不因此变成观点。" },
+  { key: "esports", tagColor: "carmine", label: "电竞", feedLabel: "电竞与社区", section: "电竞与社区", guide: "电竞赛事、战队与选手转会、社区现象、模组/同人文化、直播与创作者生态" },
+  { key: "tools-engines", tagColor: "turquoise", label: "工具引擎", feedLabel: "引擎与工具", section: "引擎与工具", guide: "游戏引擎、中间件、编辑器、SDK、构建与管线工具、平台开发者文档与版本发布。讲怎么用这些工具的教程归技术美术。" },
+  { key: "studios", tagColor: "violet", label: "工作室", feedLabel: "工作室与商务", section: "工作室与商务", guide: "工作室成立/关闭、融资并购、人事任命、发行协议、财报与商务合作" },
+  { key: "tech-art", tagColor: "green", label: "技术美术", feedLabel: "技术与观点", section: "技术与观点", guide: "渲染/玩法/网络技术分享、美术管线、GDC 级演讲、深度评测、观点与复盘、教程实践", commentary: true },
+] as const satisfies ReadonlyArray<{ key: string; tagColor: string; label: string; feedLabel?: string; section: string; guide: string; commentary?: true }>;
+
+/**
+ * 这个行业最受关注的一类发布（GameHot 是新作发行）：日报报头的“N 款新作”、改分类后修订已出的报告都按它数。
+ * category 是类别，tag 是标签，两者都对上才算；unit 接在数字后面。
+ * 没有这样一类的行业设成 null，报头就不显示这个数。
+ */
+export const RELEASE: { category: string; tag: string; unit: string } | null = { category: "releases", tag: "游戏发行", unit: "款新作" };
+
+/** 周报月报的总述可以直接写、不必在报道里找到出处的行业通用词（小写）。站名会自动算进去。 */
+export const PLAIN_TERMS: readonly string[] = ["pc", "dlc", "mmo", "rpg", "fps", "gdc", "dau", "ai", "api", "sdk", "ceo", "ipo"];
 
 /**
  * 内容理解一步给每篇资料判的“内容类型”（写在 prompts/content-understanding.md 里，改了类型要同步改那份提示词）。
@@ -65,21 +79,15 @@ export const TAG_SYNONYMS: Readonly<Record<string, string>> = {
   蒸汽: "Steam", 史低: "Steam", PS5: "PlayStation", PS4: "PlayStation", Series: "Xbox",
 };
 
-/** 模型漏了分类标签时，按内容类型补一个。 */
-export const CATEGORY_BY_ITEM_TYPE: Readonly<Record<string, string>> = {
-  game_release: "游戏发行",
-  product_launch: "产品更新",
-  tool_or_workflow: "工具引擎",
-  tech_article: "技术文章",
-  industry_event: "行业动态",
-  opinion_analysis: "大佬观点",
-  tutorial_explainer: "教程实践",
-};
-
 // ── 公司与主体 ──────────────────────────────────────────────────────────────────────────
 
-/** 公司主题：id → 显示名、卡片上显示的标签（null 表示只用 entity:<id> 归类）、别名。 */
-export const ENTITIES: Record<string, { name: string; displayTag: string | null; aliases: string[] }> = {
+/**
+ * 公司主题：id → 显示名、卡片上显示的标签（null 表示只用 entity:<id> 归类）、别名。
+ * aliases 给结构抽取模型看；orgNames 是这家公司发消息时开头用的组织名（公司、实验室、团队），
+ * 在它自己的主题页上读者知道说的是谁，可以省去；otherNames 是公司的其他称呼（官方账号名、子品牌）。
+ * 所有这些名字都用来认出说的是哪家公司，比如把事实的主体对到发布方。
+ */
+export const ENTITIES: Record<string, { name: string; displayTag: string | null; aliases: string[]; orgNames?: string[]; otherNames?: string[] }> = {
   nintendo: { name: "Nintendo", displayTag: "Nintendo", aliases: ["Nintendo", "任天堂", "Switch", "Switch 2"] },
   sony: { name: "Sony / PlayStation", displayTag: "Sony", aliases: ["Sony", "索尼", "PlayStation", "PS5", "PS4", "SIE"] },
   microsoft: { name: "Microsoft / Xbox", displayTag: "Microsoft", aliases: ["Microsoft", "微软", "Xbox", "Game Pass", "Activision", "Blizzard", "Bethesda"] },
@@ -104,6 +112,7 @@ export const ENTITIES: Record<string, { name: string; displayTag: string | null;
 
 /**
  * 身份词典：摘要和标题里出现的公司，必须在原文里也出现过，否则退回原标题、丢掉摘要（防止模型张冠李戴）。
+ * 行业没有这个问题时可以留空数组。
  */
 export const IDENTITY_LEXICON: ReadonlyArray<{ id: string; name: string; patterns: RegExp[] }> = [
   { id: "nintendo", name: "Nintendo", patterns: [/nintendo|任天堂|\bswitch\s?2?\b/i] },

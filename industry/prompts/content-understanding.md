@@ -18,7 +18,7 @@
 - `opinion_analysis`：观点、行业判断、复盘或长访谈
 - `tutorial_explainer`：教程、科普、解读或评测导购
 
-优先级：新作/大版本选 game_release；平台或产品功能选 product_launch；引擎工具或可复用方法选 tool_or_workflow；技术深度文优先 tech_article；评测选 tutorial_explainer。
+优先级：新作/大版本选 game_release；平台或产品功能选 product_launch；引擎工具或可复用方法选 tool_or_workflow；技术深度文优先 tech_article；评测选 tutorial_explainer。原文把发布写成过去的事、本条在讲用法或做演示时，不算本次发布，选 tutorial_explainer。
 
 输出前检查 `itemType` 与第一个分类标签是否自洽：`game_release` 对应“游戏发行”，`product_launch` 对应“产品更新”，`tool_or_workflow` 对应“工具引擎”或“教程实践”，`tech_article` 对应“技术文章”，`industry_event` 对应“行业动态”或“政策监管”，`opinion_analysis` 对应“大佬观点”，`tutorial_explainer` 对应“教程实践”或“评测导购”。如果二者冲突，按当前材料的核心事件修正后再输出。
 
