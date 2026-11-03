@@ -25,6 +25,9 @@ x-backend: &backend
 
 services:
   db:
+    labels:
+      # Prevent WUD from watching/updating this DB (major postgres bumps break the data dir)
+      wud.watch: "false"
     image: postgres:17-alpine
     restart: unless-stopped
     environment:
